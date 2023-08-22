@@ -1,0 +1,13 @@
+{
+  "name": "movies-explorer-api",
+  "version": "1.0.0",
+  "description": "Сервис, в котором можно найти фильмы по запросу и сохранить в личном кабинете",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "lint": "npx eslint ."
+  },
+  "author": "diplom",
+  "license": "ISC"
+}
