@@ -15,7 +15,7 @@ const { PORT } = process.env;
 
 const adress = process.env.DB_ADDRESS;
 
-mongoose.connect(adress || 'mongodb://localhost:27017/bitfilmsdb', {
+mongoose.connect(adress || 'mongodb://127.0.0.1:27017/bitfilmsdb', {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
