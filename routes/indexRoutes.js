@@ -3,6 +3,7 @@ const { celebrate, Joi } = require('celebrate');
 const userRoutes = require('./userRoutes');
 const movieRoutes = require('./movieRoutes');
 const auth = require('../middlewares/auth');
+const NotFoundError = require('../errors/NotFoundError');
 
 const {
   createUser,
@@ -30,5 +31,9 @@ router.post('/signout', auth, signout);
 router.use('/users', auth, userRoutes);
 
 router.use('/movies', auth, movieRoutes);
+
+router.use('/*', auth, (req, res, next) => {
+  next(new NotFoundError('Страница не существует.'));
+});
 
 module.exports = router;
