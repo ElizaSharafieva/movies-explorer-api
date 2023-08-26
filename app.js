@@ -22,7 +22,7 @@ mongoose.connect(adress || 'mongodb://127.0.0.1:27017/bitfilmsdb', {
 
 const limit = expressRateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 10,
+  max: 100,
   message: 'Превышен лимит запросов',
 });
 
