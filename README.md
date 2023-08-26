@@ -16,3 +16,5 @@
 `npm run dev` — запускает сервер с hot-reload
 
 Ссылка на репозиторий https://github.com/SorokinPavel/movies-explorer-api.git
+
+Ссылка на backend https://api.films.nomoredomainsicu.ru/
