@@ -19,9 +19,9 @@ router.post('/', celebrate({
     image: Joi.string().required().pattern(pattern),
     trailerLink: Joi.string().required().pattern(pattern),
     thumbnail: Joi.string().required().pattern(pattern),
-    movieId: Joi.string().required(),
-    nameRU: Joi.string().required().pattern(/^[а-яА-Я]+/m),
-    nameEN: Joi.string().required().pattern(/^[a-zA-Z]+/m),
+    movieId: Joi.number().required(),
+    nameRU: Joi.string().required(),
+    nameEN: Joi.string().required(),
   }),
 }), createMovie);
 

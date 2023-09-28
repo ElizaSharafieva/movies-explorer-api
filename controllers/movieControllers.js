@@ -30,6 +30,7 @@ const createMovie = (req, res, next) => {
       if (error.name === 'ValidationError') {
         next(new BadRequestError('Переданы некорректные данные при создании фильма.'));
       } else {
+
         next(error);
       }
     });
