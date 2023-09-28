@@ -9,6 +9,7 @@ const helmet = require('helmet');
 const expressRateLimit = require('express-rate-limit');
 const routes = require('./routes/indexRoutes');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+const { prototype } = require('./errors/BadRequestError');
 
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 
@@ -16,7 +17,7 @@ const { PORT } = process.env;
 
 const adress = process.env.DB_ADDRESS;
 
-mongoose.connect('mongodb://127.0.0.1:27017/bitfilmsdb', {
+mongoose.connect(adress, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
@@ -60,4 +61,4 @@ app.use((err, req, res, next) => {
   next();
 });
 
-app.listen(3000);
+app.listen(PORT);
