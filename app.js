@@ -30,7 +30,7 @@ const limit = expressRateLimit({
 
 const app = express();
 
-app.use(cors({ origin: 'https://films.nomoredomainsicu.ru' , credentials: true }));
+app.use(cors({ origin: 'https://films.nomoredomainsicu.ru' || 'http://localhost:3000' , credentials: true }));
 
 app.use(express.json());
 
