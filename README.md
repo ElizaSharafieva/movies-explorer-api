@@ -15,6 +15,6 @@
 `npm run start` — запускает сервер   
 `npm run dev` — запускает сервер с hot-reload
 
-Ссылка на репозиторий https://github.com/SorokinPavel/movies-explorer-api.git
+Ссылка на репозиторий https://github.com/ElizaSharafieva/movies-explorer-api
 
 Ссылка на backend https://api.films.nomoredomainsicu.ru/
